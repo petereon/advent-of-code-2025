@@ -11,3 +11,20 @@ While I tried to cast Advent of Code as so many do - to experience a new languag
 ## Day 3 (Elixir)
 
 The first language of the lot I have never touched before. I was very sceptical of the `do-end` syntax - having previously worked in Lua, where I had serious reservations - but I must say this was an absolute blast. The language is well designed and practical, providing nice variations of syntax to support different use-cases and intent (I really like the explicit `arity` of function when using HOFs) and it spins up fast (unlike Clojure).
+
+
+## Languages to try:
+
+- OCaml
+- Scala
+- Kotlin (?) (Java-- smh)
+- C(++) (?) (I am not sure I feel like inventing a universe)
+- Gleam (?) (Love-child of Rust and Elixir)
+- Amber
+- Roc (?) (Weird and niche language)
+- zsh (?) (I wrote unchristian amounts of shell scripts in my life but it sound like fun)
+- Nim
+- Zig
+- Crystal
+- F#
+- Common Lisp (?) (With my functional leaning I will probably just end up writing Clojure/Scheme 🤷)
