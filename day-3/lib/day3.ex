@@ -2,9 +2,8 @@ defmodule Day3 do
   require File
   # require Stream
   def find_largest_joltage(bank, num_batteries) do
-
-    batteries = find_largest_in_sublist(bank |> String.graphemes |> Enum.map(&String.to_integer/1), num_batteries, [])
-    IO.puts(Enum.join(batteries))
+    list = bank |> String.graphemes |> Enum.map(&String.to_integer/1)
+    batteries = find_largest_in_sublist(list, num_batteries, [])
     String.to_integer(Enum.join(batteries))
   end
 
