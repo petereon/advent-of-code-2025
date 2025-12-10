@@ -13,7 +13,9 @@ While I tried to cast Advent of Code as so many do - to experience a new languag
 The first language of the lot I have never touched before. I was very sceptical of the `do-end` syntax - having previously worked in Lua, where I had serious reservations - but I must say this was an absolute blast. The language is well designed and practical, providing nice variations of syntax to support different use-cases and intent (I really like the explicit `arity` of function when using HOFs) and it spins up fast (unlike Clojure).
 
 
-## Languages to try:
+## Languages
+
+Languages to try:
 
 - OCaml
 - Scala
@@ -28,3 +30,14 @@ The first language of the lot I have never touched before. I was very sceptical 
 - Crystal
 - F#
 - Common Lisp (?) (With my functional leaning I will probably just end up writing Clojure/Scheme 🤷)
+
+Disqualified languages:
+
+| Language | Reason                            |
+|----------|-----------------------------------|
+| Rust     | I work in it                      |
+| Python   | I work in it (grudgingly)         |
+| Go       | I work in it (wishing I did more) |
+| JS/TS    | I don't want to                   |
+| Lua      | Meh                               |
+| Java     | Ugh                               |
