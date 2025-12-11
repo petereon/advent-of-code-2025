@@ -12,6 +12,10 @@ While I tried to cast Advent of Code as so many do - to experience a new languag
 
 The first language of the lot I have never touched before. I was very sceptical of the `do-end` syntax - having previously worked in Lua, where I had serious reservations - but I must say this was an absolute blast. The language is well designed and practical, providing nice variations of syntax to support different use-cases and intent (I really like the explicit `arity` of function when using HOFs) and it spins up fast (unlike Clojure).
 
+## Day 4 (C)
+
+I was thinking of doing this one in OCaml, but I correctly guessed the second part and assumed disgusting mutability and easy for-loops will be a nice to have - hence C. Believe it or not, I've never written C in my life before. It was about what I expected it be - I spent way too long writing utility functions and once done with that, BOOM, 10 minutes and done. It's not a walk in a park - nothing short of a muddy march - but it gets you where you need to go
+
 
 ## Languages
 

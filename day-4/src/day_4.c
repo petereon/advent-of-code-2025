@@ -64,7 +64,7 @@ char *make_empty_line(int size) {
   return s;
 }
 
-int count_removable_rolls(char *prev_line, char *current_line,
+int count_and_replace_removable_rolls(char *prev_line, char *current_line,
                           char *next_line) {
   int removable_rolls = 0;
   int size = strlen(current_line);
@@ -75,6 +75,7 @@ int count_removable_rolls(char *prev_line, char *current_line,
   for (int i = 0; i < size; i++) {
     if (current_line[i] == '@') {
       if (is_roll_removable(i, prev_line, current_line, next_line)) {
+        current_line[i] = '.';
         removable_rolls++;
       }
     }

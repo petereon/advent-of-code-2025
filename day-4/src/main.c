@@ -1,4 +1,5 @@
 #include "day_4.h"
+#include <stdbool.h>
 #include <stdio.h>
 
 #include <string.h>
@@ -13,22 +14,34 @@ int main(void) {
   char *curr_line;
   char *next_line;
 
-  for (int i = 0; i < line_count; i++) {
-    curr_line = lines[i];
+  int sum_removable_prev = 0;
+
+  while (true) {
+    for (int i = 0; i < line_count; i++) {
+      curr_line = lines[i];
+
+      if (line_count > i + 1) {
+        next_line = lines[i + 1];
+      } else {
+        next_line = make_empty_line(strlen(curr_line));
+      }
+
+      if (i != 0) {
+        prev_line = lines[i - 1];
+      } else {
+        prev_line = make_empty_line(strlen(curr_line));
+      }
+
+      sum_removable = sum_removable + count_and_replace_removable_rolls(
+                                          prev_line, curr_line, next_line);
+    }
     
-    if (line_count > i + 1){
-      next_line = lines[i + 1];
-    } else {
-      next_line = make_empty_line(strlen(curr_line));
+    if (sum_removable == sum_removable_prev){
+      printf("iter");
+      break;
     }
 
-    if (i != 0) {
-      prev_line = lines[i - 1];
-    } else {
-      prev_line = make_empty_line(strlen(curr_line));
-    }
-
-    sum_removable = sum_removable + count_removable_rolls(prev_line, curr_line, next_line);
+    sum_removable_prev = sum_removable;
   }
 
   printf("\n\nFinal result: %d\n", sum_removable);
