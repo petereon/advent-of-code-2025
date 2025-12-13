@@ -22,6 +22,10 @@ This is the most confused I have been programming in a long time - and I routine
 
 > My disappointment is immeasurable and my day is ruined.
 
+## Day 6 (Kotlin)
+
+Scala sucking big has intrigued me, so I prioritized Kotlin being the other popular JVM language - and I must say it's way better. It's an upgrade to Java - unlike Scala. Compiler was not wasting my time either (I forgot to complain about the time Scala takes to compile each time - non-negligible number of seconds). The syntax is nice. Having some experience in Rust, I found cast from `String?` to `String` without any complaints or warnings a little ticklish, but hey, it's a practical language. It gives you the tools to handle null and leaves you an option to shoot yourself in the foot if you are so inclined with no fuss. I kinda like Kotlin. I have zero use-case for it, but it's palatable and if I ever need to target JVM, Kotlin will absolutely be my language of choice.
+
 ## Languages
 
 Languages to try (ORDER BY interest descending):
@@ -31,7 +35,7 @@ Languages to try (ORDER BY interest descending):
 - [x] Elixir
 - [x] C(++) (?) (I am not sure I feel like inventing a universe)
 - [x] Scala
-- [ ] Kotlin (?) (Java-- smh)
+- [x] Kotlin (?) (Java-- smh)
 - [ ] Raku
 - [ ] Crystal
 - [ ] Zig
