@@ -31,14 +31,15 @@ Languages to try (ORDER BY interest descending):
 - [x] Elixir
 - [x] C(++) (?) (I am not sure I feel like inventing a universe)
 - [x] Scala
+- [ ] Kotlin (?) (Java-- smh)
+- [ ] Raku
+- [ ] Crystal
+- [ ] Zig
+- [ ] Carbon
 - [ ] OCaml
 - [ ] Gleam (?) (Love-child of Rust and Elixir)
-- [ ] Zig
 - [ ] Amber
-- [ ] Raku
 - [ ] F#
-- [ ] Crystal
-- [ ] Kotlin (?) (Java-- smh)
 - [ ] zsh (?) (I wrote unchristian amounts of shell scripts in my life but it sound like fun)
 - [ ] Nim
 - [ ] V
