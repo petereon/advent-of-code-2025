@@ -12,23 +12,48 @@ class App {
         }
 }
 
-fun applyOp(op: String, vararg nums: String): Long {
+fun applyOp(op: String, nums: List<Long>): Long {
     val result = when (op) {
-        "+" -> nums.sumOf { it.toLong() }
-        "*" -> nums.map { it.toLong() }.fold(1L) { acc, num -> acc * num }
+        "+" -> nums.sum()
+        "*" -> nums.fold(1L) { acc, num -> acc * num }
         else -> throw Exception("Shouldn't happen")
     }
-    println("op: $op args: ${nums.joinToString(", ")} - result: $result")
 
     return result
 }
 
+fun parseNum(vararg digits: Char): Long{
+    return digits.fold("") { acc, digit ->
+        when (digit) {
+            ' ' -> acc
+            else -> acc+digit
+        }
+    }.toLong()
+}
+
 fun main() {
     val lines = File("data/input.txt").readLines()
-    val splitLines = lines.map { it.trim().split("\\s+".toRegex()) }
+    val endIndex = lines[0].length-1
+
     var sum: Long = 0
-    for (i in 0..<splitLines[0].size) {
-        sum += applyOp(splitLines[4][i], splitLines[0][i], splitLines[1][i], splitLines[2][i], splitLines[3][i])
+
+    val nums = mutableListOf<Long>()
+    var op: String? = null
+    for (i in 0..endIndex) run {
+
+        val col = lines.map {it[i]}
+        if (col[4] != ' '){
+            op = col[4].toString()
+        }
+        if (col.any {it != ' '}){
+            nums.add(parseNum(col[0], col[1], col[2], col[3]))
+        }
+        if (col.all {it == ' ' || i == endIndex}){
+            println("op: $op args: ${nums.joinToString(", ")}")
+            sum += applyOp(op.toString(), nums)
+            nums.clear()
+            op = null
+        }
     }
     println(sum)
 }
