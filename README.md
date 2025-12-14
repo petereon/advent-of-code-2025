@@ -41,6 +41,7 @@ Languages to try (ORDER BY interest descending):
 - [ ] Zig
 - [ ] Carbon
 - [ ] OCaml
+- [ ] Squeak (Smalltalk)
 - [ ] Gleam (?) (Love-child of Rust and Elixir)
 - [ ] Amber
 - [ ] F#
