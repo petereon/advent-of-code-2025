@@ -36,12 +36,14 @@ Languages to try (ORDER BY interest descending):
 - [x] C(++) (?) (I am not sure I feel like inventing a universe)
 - [x] Scala
 - [x] Kotlin (?) (Java-- smh)
-- [ ] Raku
-- [ ] Crystal
+- [ ] ~~Raku~~
 - [ ] Zig
 - [ ] Carbon
+- [ ] Swift
+- [ ] Fortran
 - [ ] OCaml
 - [ ] Squeak (Smalltalk)
+- [ ] Crystal
 - [ ] Gleam (?) (Love-child of Rust and Elixir)
 - [ ] Amber
 - [ ] F#
