@@ -35,7 +35,7 @@ fn pass_laser(
       pass_laser(
         laser_position
           |> list.flatten
-          |> list.filter(fn(num) { num >= 0 && num < 15 })
+          |> list.filter(fn(num) { num >= 0 && num < 141 })
           |> list.unique,
         rest_rows,
         count_splits,
@@ -57,6 +57,7 @@ fn get_starting_laser_position(head: String) -> List(Int) {
 
 fn preprocess_rows(rows: List(String)) -> List(List(Int)) {
   rows
+  |> list.filter(fn(row) { list.contains(string.to_graphemes(row), "^") })
   |> list.map(fn(row) {
     row
     |> string.to_graphemes()
