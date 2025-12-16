@@ -26,6 +26,21 @@ This is the most confused I have been programming in a long time - and I routine
 
 Scala sucking big has intrigued me, so I prioritized Kotlin being the other popular JVM language - and I must say it's way better. It's an upgrade to Java - unlike Scala. Compiler was not wasting my time either (I forgot to complain about the time Scala takes to compile each time - non-negligible number of seconds). The syntax is nice. Having some experience in Rust, I found cast from `String?` to `String` without any complaints or warnings a little ticklish, but hey, it's a practical language. It gives you the tools to handle null and leaves you an option to shoot yourself in the foot if you are so inclined with no fuss. I kinda like Kotlin. I have zero use-case for it, but it's palatable and if I ever need to target JVM, Kotlin will absolutely be my language of choice.
 
+## Intermezzo (Let's talk about Zig)
+
+Trying to do __Day 7__, I happened to encounter a streak of languages that I just couldn't (bring myself to) work in. Most of it was matter of personal preference, but there was one big exception - Zig.
+
+Zig really got me by one statement in its landing page:
+
+> Focus on debugging your application rather than debugging your programming language knowledge.
+
+That does sound in my ball-park - a nice anti-thesis to whatever Raku (Perl) is doing. 
+
+While I am not a massive fun of "BYO buffered-reader" languages in the first place, I appreciate the value. I also enjoy the syntax and find the intent to embed into C-codebases interesting - about time for a more modern-feeling language that shares the C's penchant for simplicity. But, and it's a big one - I found the language nearly unusable. 
+
+I couldn't get a simple file read to work - granted, I was not trying for hours. The language changes its standard library roughly every 15 seconds. Embedding such a language in a rock-stable C-codebases, which barely needed to change since the 90's sounds like the pretty bad deal. I understand the language is not in `1.x.x` yet, but the rate of breaking changes undermines adoptability and betrays some of the goals in my opionion. What makes this more pronounced still, is that errors are very stingy on details - I'd expect deprecation notices and "what to use instead" in a modern language.
+
+
 ## Languages
 
 Languages to try (ORDER BY interest descending):
@@ -37,18 +52,18 @@ Languages to try (ORDER BY interest descending):
 - [x] Scala
 - [x] Kotlin (?) (Java-- smh)
 - [ ] ~~Raku~~
-- [ ] Zig
-- [ ] Carbon
-- [ ] Swift
+- [ ] ~~Zig~~
+- [ ] ~~Carbon~~
+- [ ] ~~Swift~~
+- [ ] Gleam (?) (Love-child of Rust and Elixir)
+- [ ] Nim
+- [ ] Crystal
 - [ ] Fortran
 - [ ] OCaml
 - [ ] Squeak (Smalltalk)
-- [ ] Crystal
-- [ ] Gleam (?) (Love-child of Rust and Elixir)
-- [ ] Amber
-- [ ] F#
 - [ ] zsh (?) (I wrote unchristian amounts of shell scripts in my life but it sound like fun)
-- [ ] Nim
+- [ ] F#
+- [ ] Amber
 - [ ] V
 - [ ] CoffeeScript
 - [ ] Common Lisp (?) (With my functional leaning I will probably just end up [ ] writing Clojure/Scheme 🤷)
