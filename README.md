@@ -18,7 +18,7 @@ I was thinking of doing this one in OCaml, but I correctly guessed the second pa
 
 ## Day 5 (Scala)
 
-This is the most confused I have been programming in a long time - and I routinely code in fairly esoteric languages. My last sparring with Scala was when I was writing Java for living and Scala was a wonderful functional-capable escape from the Java-dread. That said, I do not like Scala 3 one bit. Syntax is foreign, unfamiliar and doesn't feel consistent. Also, what absolute madman figured parameterless method should be called without the parentheses? 
+This is the most confused I have been programming in a long time - and I routinely code in fairly esoteric languages. My last sparring with Scala was when I was writing Java for living and Scala was a wonderful functional-capable escape from the Java-dread. That said, I do not like Scala 3 one bit. Syntax is foreign, unfamiliar and doesn't feel consistent. Also, what absolute madman figured parameterless method should be called without the parentheses?
 
 > My disappointment is immeasurable and my day is ruined.
 
@@ -34,12 +34,15 @@ Zig really got me by one statement in its landing page:
 
 > Focus on debugging your application rather than debugging your programming language knowledge.
 
-That does sound in my ball-park - a nice anti-thesis to whatever Raku (Perl) is doing. 
+That does sound in my ball-park - a nice anti-thesis to whatever Raku (Perl) is doing.
 
-While I am not a massive fun of "BYO buffered-reader" languages in the first place, I appreciate the value. I also enjoy the syntax and find the intent to embed into C-codebases interesting - about time for a more modern-feeling language that shares the C's penchant for simplicity. But, and it's a big one - I found the language nearly unusable. 
+While I am not a massive fun of "BYO buffered-reader" languages in the first place, I appreciate the value. I also enjoy the syntax and find the intent to embed into C-codebases interesting - about time for a more modern-feeling language that shares the C's penchant for simplicity. But, and it's a big one - I found the language nearly unusable.
 
 I couldn't get a simple file read to work - granted, I was not trying for hours. The language changes its standard library roughly every 15 seconds. Embedding such a language in a rock-stable C-codebases, which barely needed to change since the 90's sounds like the pretty bad deal. I understand the language is not in `1.x.x` yet, but the rate of breaking changes undermines adoptability and betrays some of the goals in my opionion. What makes this more pronounced still, is that errors are very stingy on details - I'd expect deprecation notices and "what to use instead" in a modern language.
 
+## Day 7 (Gleam)
+
+Reads like Rust, feels like Elixir - absolutely my kind of language. Type errors could use some work but hey, it's rather nice already given how young and unpopular of a language this is. Also 4-th language that lacks "loops", even lacks "if" statements/expressions - just a nice "case" expression that enforces handling of all the pesky alternatives. I did like Gleam. I did not like this exercise tho - so tedious to think about during the holidays.
 
 ## Languages
 
@@ -55,7 +58,7 @@ Languages to try (ORDER BY interest descending):
 - [ ] ~~Zig~~
 - [ ] ~~Carbon~~
 - [ ] ~~Swift~~
-- [ ] Gleam (?) (Love-child of Rust and Elixir)
+- [x] Gleam (?) (Love-child of Rust and Elixir)
 - [ ] Nim
 - [ ] Crystal
 - [ ] Fortran
