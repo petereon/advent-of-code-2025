@@ -1,3 +1,4 @@
+import gleam/dict.{type Dict}
 import gleam/int
 import gleam/io
 import gleam/list
@@ -10,9 +11,20 @@ pub fn main() -> Nil {
 
   let laser_position = get_starting_laser_position(head)
   let rows = preprocess_rows(rest)
+  let width = string.length(head)
 
+  // Part 1: Count splits
   let #(_, final_count_splits) = pass_laser(laser_position, rows, 0)
-  io.println(int.to_string(final_count_splits))
+  io.println("Part 1: " <> int.to_string(final_count_splits))
+
+  // Part 2: Count timelines
+  let initial_timelines =
+    list.fold(laser_position, dict.new(), fn(acc, pos) {
+      dict.insert(acc, pos, 1)
+    })
+  let total_timelines = pass_laser_part2(initial_timelines, rows, width)
+  io.println("Part 2: " <> int.to_string(total_timelines))
+
   Nil
 }
 
@@ -41,6 +53,41 @@ fn pass_laser(
         count_splits,
       )
     }
+  }
+}
+
+fn pass_laser_part2(
+  timelines: Dict(Int, Int),
+  rows: List(List(Int)),
+  width: Int,
+) -> Int {
+  case rows {
+    [] -> dict.fold(timelines, 0, fn(acc, _pos, count) { acc + count })
+    [current_row, ..rest_rows] -> {
+      let new_timelines =
+        dict.fold(timelines, dict.new(), fn(acc, pos, count) {
+          case list.contains(current_row, pos) {
+            True -> {
+              acc
+              |> add_timelines(pos - 1, count)
+              |> add_timelines(pos + 1, count)
+            }
+            False -> add_timelines(acc, pos, count)
+          }
+        })
+
+      let filtered =
+        dict.filter(new_timelines, fn(pos, _count) { pos >= 0 && pos < width })
+
+      pass_laser_part2(filtered, rest_rows, width)
+    }
+  }
+}
+
+fn add_timelines(d: Dict(Int, Int), pos: Int, count: Int) -> Dict(Int, Int) {
+  case dict.get(d, pos) {
+    Ok(existing) -> dict.insert(d, pos, existing + count)
+    Error(_) -> dict.insert(d, pos, count)
   }
 }
 
